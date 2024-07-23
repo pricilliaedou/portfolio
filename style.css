@@ -1,0 +1,162 @@
+:root {
+  --bcg-body: #f7f7f8;
+  --bcg-container: #ffffff;
+  --corail-color: #e76f51;
+}
+
+/* Général */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--bcg-body);
+}
+.container {
+  max-width: 1200px;
+  background-color: var(--bcg-container);
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  height: 100vh;
+
+  /* Shadow */
+  border-radius: 28px;
+  box-shadow: 26px 26px 48px #bebebe, -26px -26px 48px #ffffff;
+}
+
+a {
+  text-decoration: none;
+  padding: 10px;
+}
+/* Header */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  width: 100%;
+}
+.vertical {
+  writing-mode: vertical-lr;
+  text-orientation: sideways;
+  transform: rotate(180deg);
+  position: absolute;
+  height: max-content;
+  top: 30%;
+  left: 3%;
+}
+
+nav {
+  width: 40vw;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* Main */
+main {
+  /* width: 100%; */
+  display: flex;
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 25px;
+}
+
+.left-main {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+}
+.top {
+  border-bottom: 4px solid #e76f51;
+  padding-bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+.bottom {
+  padding-top: 10px;
+}
+.right-main {
+  width: 40%;
+}
+/* Social */
+.social-buttons {
+  background-color: #ffffff;
+  box-shadow: 0px 0px 15px #00000027;
+  padding: 10px 5px;
+  border-radius: 5em;
+  position: absolute;
+  bottom: 20%;
+  right: 3%;
+}
+
+.social-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 10px;
+  background-color: #fff;
+  box-shadow: 0px 0px 4px #00000027;
+  transition: 0.3s;
+}
+
+.social-button:hover {
+  background-color: #f2f2f2;
+  box-shadow: 0px 0px 6px 3px #00000027;
+}
+
+.social-buttons svg {
+  transition: 0.3s;
+  height: 10px;
+}
+
+.github {
+  background-color: #333;
+}
+
+.github svg {
+  width: 25px;
+  height: 25px;
+  fill: #f2f2f2;
+}
+
+.github:hover svg {
+  fill: #333;
+}
+
+.linkedin {
+  background-color: #0077b5;
+}
+
+.linkedin svg {
+  fill: #f2f2f2;
+}
+
+.linkedin:hover svg {
+  fill: #0077b5;
+}
+
+@keyframes wipe-out-left {
+  from {
+    clip-path: inset(0 0 0 0);
+  }
+  to {
+    clip-path: inset(0 100% 0 0);
+  }
+}
+
+[transition-style="out:wipe:left"] {
+  animation: 2.5s cubic-bezier(0.25, 1, 0.3, 1) wipe-out-left both;
+}
