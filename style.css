@@ -1,7 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
 :root {
   --bcg-body: #f7f7f8;
   --bcg-container: #ffffff;
   --corail-color: #e76f51;
+  --principal-color: #242323;
 }
 
 /* Général */
@@ -15,15 +18,16 @@
 body {
   min-height: 100vh;
   background-color: var(--bcg-body);
+  font-family: "Noto Sans", sans-serif;
+  color: var(--principal-color);
 }
 .container {
   max-width: 1200px;
   background-color: var(--bcg-container);
   margin: 0 auto;
   padding: 0 20px;
-  position: relative;
   height: 100vh;
-
+  position: relative;
   /* Shadow */
   border-radius: 28px;
   box-shadow: 26px 26px 48px #bebebe, -26px -26px 48px #ffffff;
@@ -32,7 +36,9 @@ body {
 a {
   text-decoration: none;
   padding: 10px;
+  color: var(--principal-color);
 }
+
 /* Header */
 
 header {
@@ -42,61 +48,143 @@ header {
   height: 10vh;
   width: 100%;
 }
-.vertical {
+.vertical-text {
   writing-mode: vertical-lr;
   text-orientation: sideways;
   transform: rotate(180deg);
   position: absolute;
   height: max-content;
-  top: 30%;
-  left: 3%;
+  top: 15%;
+  left: 2%;
 }
 
 nav {
-  width: 40vw;
   display: flex;
   justify-content: space-evenly;
 }
 
 /* Main */
+
 main {
-  /* width: 100%; */
   display: flex;
   height: 90vh;
   align-items: center;
   justify-content: center;
   padding: 20px 25px;
 }
+.left-main-first,
+.left-main-second,
+.left-main-third,
+.right-main-first,
+.right-main-second,
+.rotate {
+  padding: 10px;
+}
 
+/* Main: Left bloc */
 .left-main {
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: 70%;
   align-items: center;
   justify-content: center;
   padding: 0 10px;
+  height: 40vh;
 }
-.top {
-  border-bottom: 4px solid #e76f51;
-  padding-bottom: 10px;
+.left-main-first {
   width: 100%;
   text-align: center;
+  height: 10vh;
 }
-.bottom {
-  padding-top: 10px;
+.left-main-first h2 {
+  color: #e76f51;
 }
+
+.left-main-second {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+}
+.espace {
+  width: 100%;
+  height: 0.5vh;
+  background-color: #2a9d8f;
+}
+.left-main-third {
+  height: 20vh;
+}
+
+/* Main: right bloc */
 .right-main {
-  width: 40%;
+  width: 30%;
+  height: 40vh;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
 }
+.right-main-first {
+  height: 10vh;
+}
+.r-color {
+  position: relative;
+}
+
+.r-color::after {
+  bottom: 0;
+  color: #e76f51;
+  content: "R";
+  position: absolute;
+  transform: translate(-100%, 0);
+}
+.right-main-second {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+}
+
+.right-main-second h2 {
+  font-size: 34px;
+}
+
+/* rotation boutton */
+.rotate {
+  height: 20vh;
+}
+.rotate a {
+  padding: 0;
+  font-weight: bold;
+}
+svg {
+  display: block;
+  width: 100%;
+  height: 100px;
+  letter-spacing: 0.35em;
+  align-self: flex-end;
+}
+svg text {
+  transform-origin: 50% 50%;
+  animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
 /* Social */
 .social-buttons {
-  background-color: #ffffff;
-  box-shadow: 0px 0px 15px #00000027;
   padding: 10px 5px;
   border-radius: 5em;
   position: absolute;
-  bottom: 20%;
+  bottom: 40%;
   right: 3%;
+  opacity: 0.7;
 }
 
 .social-button {
