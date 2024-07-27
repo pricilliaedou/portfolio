@@ -1,0 +1,99 @@
+main {
+  width: 60%;
+  min-height: 80vh;
+  margin: auto;
+}
+h1 {
+  padding: 0 20px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 350px;
+  padding: 20px;
+  border-radius: 20px;
+  position: relative;
+  color: #fff;
+}
+
+.form label {
+  position: relative;
+}
+
+.form label .input,
+textarea {
+  color: #333;
+  width: 100%;
+  padding: 20px 05px 05px 10px;
+  outline: 0;
+  border: 1px solid #2a9d8f;
+  border-radius: 10px;
+}
+
+.form label .input + span,
+textarea::placeholder {
+  color: #333;
+  position: absolute;
+  left: 10px;
+  top: 0px;
+  font-size: 0.9em;
+  cursor: text;
+  transition: 0.3s ease;
+}
+
+.form label .input:placeholder-shown + span,
+textarea::placeholder {
+  top: 12.5px;
+  font-size: 0.9em;
+}
+
+.form label .input:focus + span,
+.form label .input:valid + span,
+textarea::placeholder,
+textarea::placeholder {
+  color: var(--corail-color);
+  padding-top: 5px;
+  top: 0px;
+  font-size: 0.7em;
+  font-weight: 600;
+}
+
+.input,
+textarea {
+  font-size: medium;
+}
+
+.submit {
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  transform: 0.3s ease;
+  background-color: #333;
+}
+
+.submit:hover {
+  background-color: var(--corail-color);
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+.mail {
+  display: flex;
+  justify-content: space-evenly;
+}
+form p {
+  color: #3d405b;
+}

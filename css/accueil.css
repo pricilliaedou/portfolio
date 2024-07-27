@@ -1,0 +1,150 @@
+/* Main */
+
+main {
+  display: flex;
+  height: 80vh;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  flex-direction: column;
+}
+
+.section-first {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
+  height: 90%;
+}
+.left-main-first,
+.left-main-second,
+.left-main-third,
+.right-main-first,
+.right-main-second,
+.rotate {
+  padding: 10px;
+}
+
+/* Main: Left bloc */
+.left-main {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  height: 40vh;
+}
+.left-main-first {
+  width: 100%;
+  text-align: center;
+  height: 10vh;
+}
+.left-main-first h2 {
+  color: #e76f51;
+}
+
+.left-main-second {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+}
+.espace {
+  width: 100%;
+  height: 0.5vh;
+  background-color: #2a9d8f;
+}
+.left-main-third {
+  height: 20vh;
+}
+
+/* Main: right bloc */
+.right-main {
+  width: 30%;
+  height: 40vh;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+}
+.right-main-first {
+  height: 10vh;
+}
+.r-color {
+  position: relative;
+}
+
+.r-color::after {
+  bottom: 0;
+  color: #e76f51;
+  content: "R";
+  position: absolute;
+  transform: translate(-100%, 0);
+}
+.right-main-second {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+}
+
+.right-main-second h2 {
+  font-size: 3.4rem;
+}
+
+/* rotation boutton */
+.rotate {
+  height: 20vh;
+}
+.rotate a {
+  padding: 0;
+  font-weight: bold;
+}
+
+.rotate svg {
+  display: block;
+  width: 100%;
+  height: 100px;
+  letter-spacing: 0.2em;
+}
+svg text {
+  transform-origin: 50% 50%;
+  animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(-360deg);
+  }
+}
+.section-second {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+}
+.commits,
+.projets,
+.stacks {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 10px;
+  border: 1px solid black;
+  margin: 0 10px;
+  padding: 5px;
+}
+.commits p,
+.projets p,
+.stacks p {
+  font-weight: bold;
+}
+.commits div:first-child,
+.projets div:first-child,
+.stacks div:first-child {
+  color: var(--corail-color);
+}

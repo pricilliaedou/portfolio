@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
-    <title>Portfolio</title>
+    <link rel="stylesheet" href="./css/accueil.css" />
+    <title>Accueil</title>
   </head>
   <body>
     <div class="container">
@@ -16,48 +17,81 @@
         <nav>
           <a href="./index.html">Accueil</a>
           <a href="./projets.html">Projets</a>
-          <a href="./moi">A propos de moi</a>
-          <a href="./contact">Contact</a>
+          <a href="./moi.html">A propos de moi</a>
+          <a href="./contact.html">Contact</a>
         </nav>
+        <label id="hamburger">
+          <input type="checkbox" />
+          <svg viewBox="0 0 32 32">
+            <path
+              class="line line-top-bottom"
+              d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"
+            ></path>
+            <path class="line" d="M7 16 27 16"></path>
+          </svg>
+        </label>
+        <div id="navlink">
+          <a href="./index.html">Accueil</a>
+          <a href="./projets.html">Projets</a>
+          <a href="./moi.html">A propos de moi</a>
+          <a href="./contact.html">Contact</a>
+        </div>
       </header>
       <main>
-        <div class="left-main">
-          <div class="left-main-first"><h2>DEVELOPEUSE WEB</h2></div>
-          <div class="left-main-second">
-            <div class="espace"></div>
+        <section class="section-first">
+          <div class="left-main">
+            <div class="left-main-first"><h2>DEVELOPEUSE WEB</h2></div>
+            <div class="left-main-second">
+              <div class="espace"></div>
+            </div>
+            <div class="left-main-third">
+              <h2>Full-Stack Junior</h2>
+            </div>
           </div>
-          <div class="left-main-third">
-            <h2>Full-Stack Junior</h2>
-          </div>
-        </div>
-        <div class="right-main">
-          <div class="right-main-first">
-            <h2 class="r-color">BONJOUR</h2>
-          </div>
-          <div class="right-main-second">
-            <h2>je suis Pricillia</h2>
-          </div>
+          <div class="right-main">
+            <div class="right-main-first">
+              <h2 class="r-color">BONJOUR</h2>
+            </div>
+            <div class="right-main-second">
+              <h2>Je suis Pricillia</h2>
+            </div>
 
-          <!-- Link contact -->
+            <!-- Link contact -->
 
-          <div class="rotate">
-            <a href="./contact.html">
-              <svg viewBox="0 0 150 150">
-                <path
-                  id="curve"
-                  fill="transparent"
-                  d="M 75 75 m -50, 0 a 50, 50 0 1, 1 100, 0 a 50, 50 0 1, 1 -100, 0"
-                />
-                <text>
-                  <textPath xlink:href="#curve">
-                    Collaborons ensemble -
-                  </textPath>
-                </text>
-              </svg></a
-            >
+            <div class="rotate">
+              <a href="./contact.html">
+                <svg viewBox="0 0 120 120">
+                  <path
+                    id="curve"
+                    fill="transparent"
+                    d="M 75 75 m -50, 0 a 50, 50 0 1, 1 100, 0 a 50, 50 0 1, 1 -100, 0"
+                  />
+                  <text>
+                    <textPath xlink:href="#curve">
+                      Donnons vie à votre projet -
+                    </textPath>
+                  </text>
+                </svg></a
+              >
+            </div>
           </div>
-        </div>
+        </section>
+        <section class="section-second">
+          <div class="commits">
+            <div><h4>8</h4></div>
+            <div><p>Commits</p></div>
+          </div>
+          <div class="projets">
+            <div><h4>1</h4></div>
+            <div><p>Projet</p></div>
+          </div>
+          <div class="stacks">
+            <div><h4>8</h4></div>
+            <div><p>Stacks</p></div>
+          </div>
+        </section>
       </main>
+
       <!-- Social -->
       <div class="social-buttons">
         <a href="#" class="social-button github">
@@ -88,8 +122,21 @@
             </g>
           </svg>
         </a>
+        <div class="cv">
+          <a href="">CV</a>
+        </div>
       </div>
+      <footer>
+        <p>
+          &copy; Réalisé par
+          <a href="https://github.com/pricilliaedou"
+            >Pricillia Lydiane EDOU EDOU</a
+          >
+          - 2024
+        </p>
+      </footer>
     </div>
+
     <script src="main.js"></script>
   </body>
 </html>
