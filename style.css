@@ -24,7 +24,7 @@ body {
   font-family: "Noto Sans", sans-serif;
   color: var(--principal-color);
 }
-.container {
+#container {
   max-width: 1200px;
   background-color: var(--bcg-container);
   margin: 0 auto;
@@ -32,15 +32,55 @@ body {
   position: relative;
   /* Shadow */
   border-radius: 28px;
-  box-shadow: 26px 26px 48px #bebebe, -26px -26px 48px #ffffff;
 }
 
+@-webkit-keyframes slidein {
+  from {
+    background-position: top;
+    background-size: 3000px;
+  }
+  to {
+    background-position: -100px 0px;
+    background-size: 2750px;
+  }
+}
+
+@keyframes slidein {
+  from {
+    background-position: top;
+    background-size: 3000px;
+  }
+  to {
+    background-position: -100px 0px;
+    background-size: 2750px;
+  }
+}
+
+/* darkMode */
+.dark {
+  background-image: url(./images/dark.jpg);
+  color: white;
+  background-size: cover;
+  -webkit-animation: slidein 100s;
+  animation: slidein 100s;
+
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+.navDark a {
+  color: white;
+}
 a {
   text-decoration: none;
   padding: 10px;
   color: var(--principal-color);
 }
-
 a:hover {
   color: var(--corail-color);
 }
@@ -63,6 +103,47 @@ p,
 a,
 span {
   font-size: 1.6rem;
+}
+
+/* Toggle day-night */
+#toggle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  /* box-shadow: 0 0 50px 20px rgba(0, 0, 0, 0.1); */
+  line-height: 1;
+}
+
+.checkbox {
+  display: none;
+}
+
+.icon {
+  grid-column: 1 / 1;
+  grid-row: 1 / 1;
+  transition: transform 500ms;
+}
+
+.icon--moon {
+  transition-delay: 200ms;
+  border-radius: 50%;
+}
+
+.icon--sun {
+  transform: scale(0);
+  border-radius: 50%;
+}
+
+#switch:checked + .icon--moon {
+  transform: rotate(360deg) scale(0);
+}
+
+#switch:checked ~ .icon--sun {
+  transition-delay: 200ms;
+  transform: scale(1) rotate(360deg);
 }
 /* Header */
 
@@ -257,7 +338,7 @@ footer {
   padding: 1.5em;
   height: 10vh;
   border-radius: 0 0 28px 28px;
-  box-shadow: none;
+  /* box-shadow: none; */
 }
 footer a {
   color: var(--bcg-container);
