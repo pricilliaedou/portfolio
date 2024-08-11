@@ -1,0 +1,20 @@
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+.projets {
+  display: flex;
+}
+.projet {
+  display: flex;
+  justify-content: space-between;
+}
+.image-projet {
+  background-color: brown;
+  width: 80%;
+}
+.text-projet {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+}
